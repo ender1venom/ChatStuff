@@ -1,33 +1,86 @@
-# Цвет триггерных замен:
-# BLACK
-# DARK_BLUE
-# DARK_GREEN
-# DARK_AQUA
-# DARK_RED
-# DARK_PURPLE
-# GOLD
-# GRAY
-# DARK_GRAY
-# BLUE
-# GREEN
-# AQUA
-# RED
-# LIGHT_PURPLE
-# YELLOW
-# WHITE
-
+language: ru
 trigger-color: GREEN
+local-chat-distance: 100
 
 triggers:
+  #кординаты
   xyz:
+    - "coords"
+    - "pos"
+    - "гдея"
     - "xyz"
     - "координаты"
     - "кордах"
-
+  #предмет
   item:
     - "item"
     - "предмет"
-
+    - "рука"
+    - "что в руке"
+  #рандом
   random:
     - "random"
     - "рандом"
+  # Слова для цензуры
+  bad-words:
+    - "badwords"
+    - "spam"
+  # Милые замены для цензуры
+  cute-words:
+    - "Цветочек"
+    - "Котик"
+    - "Печенька"
+    - "Мишутка"
+    - "Лисичка"
+    - "Панда"
+    - "Сакура"
+    - "Искорка"
+    - "Конфетка"
+    - "Кексик"
+    - "Единорожек"
+    - "Звёздочка"
+    - "Леденец"
+    - "Бантик"
+    - "Сердечко"
+    - "Зайка"
+    - "Мишка"
+    - "Цыплёнок"
+    - "Бабочка"
+    - "Коровка"
+    - "Пчёлка"
+    - "Уточка"
+    - "Пингвинчик"
+    - "Ёжик"
+    - "Коала"
+    - "Енотик"
+    - "Оленёнок"
+
+messages:
+  ru:
+    no-permission: "&cНет прав."
+    usage: "&e/chatstuff reload | color <цвет> | language <ru|en>"
+    reloaded: "&aПлагин перезагружен."
+    color-usage: "&e/chatstuff color <цвет>"
+    invalid-color: "&cНеверный цвет."
+    color-changed: "&aЦвет изменён на "
+    language-usage: "&e/chatstuff language <ru|en>"
+    invalid-language: "&cНеверный язык."
+    language-changed: "&aЯзык изменён."
+    nobody-heard: "&7Тебя никто не услышал"
+    distance-usage: "&e/chatstuff distance <число>"
+    invalid-distance: "&cНеверная дистанция."
+    distance-changed: "&aДистанция локального чата: "
+  en:
+    no-permission: "&cNo permission."
+    usage: "&e/chatstuff reload | color <color> | language <ru|en>"
+    reloaded: "&aPlugin reloaded."
+    color-usage: "&e/chatstuff color <color>"
+    invalid-color: "&cInvalid color."
+    color-changed: "&aColor changed to "
+    language-usage: "&e/chatstuff language <ru|en>"
+    invalid-language: "&cInvalid language."
+    language-changed: "&aLanguage changed."
+    nobody-heard: "&7Nobody heard you"
+    distance-usage: "&e/chatstuff distance <number>"
+    invalid-distance: "&cInvalid distance."
+    distance-changed: "&aLocal chat distance: "
