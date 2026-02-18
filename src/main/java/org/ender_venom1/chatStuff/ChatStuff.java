@@ -109,10 +109,12 @@ public final class ChatStuff extends JavaPlugin implements Listener, CommandExec
 
         if (global) {
 
-            Component formatted = Component.text("G ", NamedTextColor.GRAY)
+            Component formatted = Component.text()
+                    .append(Component.text("G ", NamedTextColor.GRAY))
                     .append(Component.text(player.getName(), NamedTextColor.WHITE))
                     .append(Component.text(" > ", NamedTextColor.WHITE))
-                    .append(component.color(NamedTextColor.WHITE));
+                    .append(component)
+                    .build();
 
             for (Player p : Bukkit.getOnlinePlayers()) {
                 p.sendMessage(formatted);
