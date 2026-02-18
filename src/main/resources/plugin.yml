@@ -1,0 +1,4 @@
+name: ChatStuff
+version: '1.0-SNAPSHOT'
+main: org.ender_venom1.chatStuff.ChatStuff
+api-version: '1.21'
