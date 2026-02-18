@@ -64,17 +64,6 @@ public final class ChatStuff extends JavaPlugin implements Listener {
         Bukkit.getOnlinePlayers().forEach(p -> p.sendMessage(finalMessage));
     }
 
-    /*
-        Универсальный паттерн:
-        Не буква и не цифра перед триггером
-        Не буква и не цифра после триггера
-
-        Это позволяет работать так:
-        !xyz!я!на!кордах!
-        .xyz?
-        ,рандом;
-        (предмет)
-    */
     private Pattern buildTriggerPattern(String trigger) {
         return Pattern.compile(
                 "(?i)(?<![A-Za-zА-Яа-я0-9_])"
